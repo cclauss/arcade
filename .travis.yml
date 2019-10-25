@@ -23,7 +23,8 @@ matrix:
       os: windows
       language: bash
       before_install:
-        - travis wait choco install python visualstudio2015community
+        - choco install visualstudio2015community
+        - choco install python
         - python -m pip install --upgrade pip
         - python -m pip install matplotlib  # Workaround for job failure
       env: PATH=/c/Python38:/c/Python38/Scripts:$PATH
